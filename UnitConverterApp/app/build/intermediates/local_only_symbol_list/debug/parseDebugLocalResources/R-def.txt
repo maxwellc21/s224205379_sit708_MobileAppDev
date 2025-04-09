@@ -1,0 +1,30 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable gradient_background
+drawable gradient_button
+drawable gradient_button_modern
+drawable ic_converter
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable input_bg
+drawable result_bg
+drawable spinner_bg
+drawable spinner_bg_modern
+font roboto_bold
+font roboto_medium
+id convertButton
+id destinationUnit
+id footer
+id inputValue
+id resultText
+id sourceUnit
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.UnitConverterApp
+style Theme.UnitConverterApp
+xml backup_rules
+xml data_extraction_rules
