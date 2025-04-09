@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".MainActivity">
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/footer"
+        android:fillViewport="true"
+        android:padding="24dp"
+        android:scrollbars="none"
+        android:fadeScrollbars="true"
+        android:overScrollMode="never">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Header Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:paddingHorizontal="16dp">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/ic_converter"
+                    android:tint="@color/white"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Unit Converter"
+                    android:textSize="28sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.03"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/roboto_bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Convert between different units easily"
+                    android:textSize="14sp"
+                    android:textColor="#CCFFFFFF"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/roboto_medium"/>
+            </LinearLayout>
+
+            <!-- Main Card Content -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="24dp"
+                app:elevation="8dp"
+                app:cardBackgroundColor="#F5F5F5"
+                android:layout_marginTop="32dp"
+                android:layout_marginHorizontal="8dp"
+                android:padding="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <!-- Input Value -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:boxStrokeColor="#6a11cb"
+                        android:hint="Enter value"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginHorizontal="4dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:textSize="16sp"
+                            android:paddingVertical="14dp"
+                            android:paddingHorizontal="16dp"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Source Unit -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="From"
+                        android:textSize="14sp"
+                        android:textColor="#6a11cb"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/roboto_medium"/>
+
+                    <Spinner
+                        android:id="@+id/sourceUnit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/spinner_bg_modern"
+                        android:padding="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginHorizontal="8dp"/>
+
+                    <!-- Destination Unit -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="To"
+                        android:textSize="14sp"
+                        android:textColor="#6a11cb"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/roboto_medium"/>
+
+                    <Spinner
+                        android:id="@+id/destinationUnit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/spinner_bg_modern"
+                        android:padding="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginHorizontal="8dp"/>
+
+                    <!-- Convert Button -->
+                    <Button
+                        android:id="@+id/convertButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:text="CONVERT"
+                        android:textColor="@color/white"
+                        android:background="@drawable/gradient_button_modern"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:textSize="16sp"
+                        android:textAllCaps="false"
+                        android:letterSpacing="0.03"
+                        android:fontFamily="@font/roboto_bold"
+                        android:elevation="4dp"
+                        android:stateListAnimator="@null"/>
+
+                    <!-- Result Section -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/result_bg"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:padding="24dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Result"
+                            android:textSize="14sp"
+                            android:textColor="#6a11cb"
+                            android:fontFamily="@font/roboto_medium"/>
+
+                        <TextView
+                            android:id="@+id/resultText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:textColor="#333333"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:fontFamily="@font/roboto_bold"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Fixed Footer -->
+    <TextView
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Developed as a requirement for SIT708 Mobile Application Development"
+        android:textSize="12sp"
+        android:textColor="#CCFFFFFF"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="#80000000"
+        android:fontFamily="@font/roboto_medium"/>
+</RelativeLayout>
