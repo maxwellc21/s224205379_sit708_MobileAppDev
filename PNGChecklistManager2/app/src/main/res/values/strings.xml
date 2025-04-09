@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">PNG Checklist Manager</string>
+
+    <string-array name="policy_categories">
+        <item>Digital ID &amp; Authentication</item>
+        <item>Cybersecurity &amp; Data Protection</item>
+        <item>e-Government Services</item>
+        <item>Connectivity &amp; Access</item>
+        <item>Capacity Building</item>
+        <item>Private Sector Enablement</item>
+    </string-array>
+</resources>
