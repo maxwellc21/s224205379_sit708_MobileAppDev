@@ -1,0 +1,10 @@
+<!-- res/drawable/ic_calculator.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M5,1c-1.1,0 -2,0.9 -2,2v18c0,1.1 0.9,2 2,2h14c1.1,0 2,-0.9 2,-2V3c0,-1.1 -0.9,-2 -2,-2H5zm0,2h14v18H5V3zm2,2v4h10V5H7zm2,6h2v2H9v-2zm4,0h2v2h-2v-2zm-4,4h2v2H9v-2zm4,0h2v2h-2v-2z" />
+</vector>

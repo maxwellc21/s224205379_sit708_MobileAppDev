@@ -1,0 +1,89 @@
+<!-- res/layout/activity_quiz.xml -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/quizContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Main quiz layout -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="3"
+            android:progress="0" />
+
+        <TextView
+            android:id="@+id/txtQuestion"
+            android:text="Question will appear here"
+            android:textSize="18sp"
+            android:layout_marginTop="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+            <RadioButton android:id="@+id/option1" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <RadioButton android:id="@+id/option2" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <RadioButton android:id="@+id/option3" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <RadioButton android:id="@+id/option4" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:text="Submit Answer"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txtHint"
+            android:textColor="#888888"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txtExplanation"
+            android:textColor="#666666"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!-- Full-screen loading overlay -->
+    <LinearLayout
+        android:id="@+id/loadingOverlay"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="#CC000000"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/progressBarStyleLarge" />
+
+        <TextView
+            android:id="@+id/loadingText"
+            android:text="Generating AI-powered quiz...\nPlease wait up to 1 minute"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</FrameLayout>
